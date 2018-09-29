@@ -49,7 +49,7 @@ client.on("message", async message => {
 		message.channel.send('The channel you are currently in, has the ID "'+msgChnlID+'"');
 	}
   
-	if(command === "setchannel1") {
+	/*if(command === "setchannel1") {
 		const channelIDman = args.join(" ");
 		const obj = {
 			channelId1: channelIDman
@@ -64,7 +64,7 @@ client.on("message", async message => {
 		}
 		jsonfile.writeFileSync(channelList, obj, { flag: 'a' })
 		message.channel.send('The channel with the ID "'+channelIDman+'" has been added to the config file "channels.json"');
-	}
+	}*/
 	
 	if(command === "1") {
 		message.delete();
@@ -216,5 +216,5 @@ client.on("message", async message => {
 	}
 });
 
-client.login(config.token);
-//client.login(process.env.token);
+
+client.login(process.env.token);
