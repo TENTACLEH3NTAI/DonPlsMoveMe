@@ -1,0 +1,24 @@
+{
+  "name": "donplsmove",
+  "version": "1.0.0",
+  "description": "don cheadle moves ppl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "H3NTAI",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TENTACLEH3NTAI/DonPlsMoveMe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TENTACLEH3NTAI/DonPlsMoveMe/issues"
+  },
+  "homepage": "https://github.com/TENTACLEH3NTAI/DonPlsMoveMe#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "jsonfile": "^5.0.0"
+  }
+}
