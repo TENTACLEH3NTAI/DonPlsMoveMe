@@ -16,6 +16,17 @@ var channel8 = config.channelID8;
 var channel9 = config.channelID9;
 var channel10 = config.channelID10;
 
+var command1 = config.cmd1;
+var command2 = config.cmd2;
+var command3 = config.cmd3;
+var command4 = config.cmd4;
+var command5 = config.cmd5;
+var command6 = config.cmd6;
+var command7 = config.cmd7;
+var command8 = config.cmd8;
+var command9 = config.cmd9;
+var command10 = config.cmd10;
+
 var msgChnlID;
 
 var isChan1;
@@ -66,61 +77,61 @@ client.on("message", async message => {
 		message.channel.send('The channel with the ID "'+channelIDman+'" has been added to the config file "channels.json"');
 	}*/
 	
-	if(command === "1") {
+	if(command === command1) {
 		message.delete();
 		clearMe();
 		isChan1=true;
 		moveMe();
 	}
-	if(command === "2") {
+	if(command === command2) {
 		message.delete();
 		clearMe();
 		isChan2=true;
 		moveMe();
 	}
-	if(command === "3") {
+	if(command === command3) {
 		message.delete();
 		clearMe();
 		isChan3=true;
 		moveMe();
 	}
-	if(command === "4") {
+	if(command === command4) {
 		message.delete();
 		clearMe();
 		isChan4=true;
 		moveMe();
 	}
-	if(command === "5") {
+	if(command === command5) {
 		message.delete();
 		clearMe();
 		isChan5=true;
 		moveMe();
 	}
-	if(command === "6") {
+	if(command === command6) {
 		message.delete();
 		clearMe();
 		isChan6=true;
 		moveMe();
 	}
-	if(command === "7") {
+	if(command === command7) {
 		message.delete();
 		clearMe();
 		isChan7=true;
 		moveMe();
 	}
-	if(command === "8") {
+	if(command === command8) {
 		message.delete();
 		clearMe();
 		isChan8=true;
 		moveMe();
 	}
-	if(command === "9") {
+	if(command === command9) {
 		message.delete();
 		clearMe();
 		isChan9=true;
 		moveMe();
 	}
-	if(command === "10") {
+	if(command === command10) {
 		message.delete();
 		clearMe();
 		isChan10=true;
@@ -216,5 +227,5 @@ client.on("message", async message => {
 	}
 });
 
-
-client.login(process.env.BOT_TOKEN);
+client.login(config.token);
+//client.login(process.env.BOT_TOKEN);
