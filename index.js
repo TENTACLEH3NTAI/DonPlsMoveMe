@@ -4,7 +4,6 @@ const jsonfile = require('jsonfile')
 const channelList = './channels.json'
 const client = new Discord.Client();
 const config = require("./config.json");
-
 var channel1 = config.channelID1;
 var channel2 = config.channelID2;
 var channel3 = config.channelID3;
@@ -15,7 +14,6 @@ var channel7 = config.channelID7;
 var channel8 = config.channelID8;
 var channel9 = config.channelID9;
 var channel10 = config.channelID10;
-
 var command1 = config.cmd1;
 var command2 = config.cmd2;
 var command3 = config.cmd3;
@@ -26,9 +24,7 @@ var command7 = config.cmd7;
 var command8 = config.cmd8;
 var command9 = config.cmd9;
 var command10 = config.cmd10;
-
 var msgChnlID;
-
 var isChan1;
 var isChan2;
 var isChan3;
@@ -40,14 +36,10 @@ var isChan8;
 var isChan9;
 var isChan10;
 
-
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   client.user.setActivity(`Moving people around`);
 });
-
-
-
 
 client.on("message", async message => {
 	if(message.author.bot) return;
@@ -59,7 +51,6 @@ client.on("message", async message => {
 		msgChnlID = message.channel.id;
 		message.channel.send('The channel you are currently in, has the ID "'+msgChnlID+'"');
 	}
-  
 	/*if(command === "setchannel1") {
 		const channelIDman = args.join(" ");
 		const obj = {
@@ -76,7 +67,6 @@ client.on("message", async message => {
 		jsonfile.writeFileSync(channelList, obj, { flag: 'a' })
 		message.channel.send('The channel with the ID "'+channelIDman+'" has been added to the config file "channels.json"');
 	}*/
-	
 	if(command === command1) {
 		message.delete();
 		clearMe();
@@ -142,7 +132,6 @@ client.on("message", async message => {
 		clearMe();
 		moveMe();
 	}
-  
 	function moveMe(){
 		permit1();
 		permit2();
@@ -154,7 +143,6 @@ client.on("message", async message => {
 		permit8();
 		permit9();
 		permit10();
-		
 		function permit1(){
 			if (!channel1) return
 			client.channels.get(channel1).overwritePermissions(message.author, {
@@ -216,16 +204,12 @@ client.on("message", async message => {
 			});
 		}
 	}
-	
 	function clearMe(){
 		isChan1 = isChan2 = isChan3 = isChan4 = isChan5 = isChan6 = isChan7 = isChan8 = isChan9 = isChan10 = false;
 	}
-
 	if(command === "say") {
 		const sayMessage = args.join(" ");
 		message.channel.send(sayMessage);
 	}
 });
-
-
 client.login(process.env.BOT_TOKEN);
