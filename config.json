@@ -1,23 +1,8 @@
-{
-  "prefix" : "move",
-  "channelID1" : "",
-  "channelID2" : "",
-  "channelID3" : "",
-  "channelID4" : "",
-  "channelID5" : "",
-  "channelID6" : "",
-  "channelID7" : "",
-  "channelID8" : "",
-  "channelID9" : "",
-  "channelID10" : "",
-  "cmd1" : "1",
-  "cmd2" : "2",
-  "cmd3" : "3",
-  "cmd4" : "4",
-  "cmd5" : "5",
-  "cmd6" : "6",
-  "cmd7" : "7",
-  "cmd8" : "8",
-  "cmd9" : "9",
-  "cmd10" : "10"
+{ 
+    "token"  : "",
+    "prefix" : "m",
+    "channelID" : [""],
+    "cmd" : [""],
+    "permitted"  : [""],
+    "missingChannelWarning"  : "false"
 }
