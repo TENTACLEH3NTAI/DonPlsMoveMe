@@ -53,14 +53,24 @@ client.on("message", async message => {
 		var i, n = cmdsLen;
 		for (i = 0; i < n; ++i) {
 				if(command === cmds[i]) {
-					message.delete();
+					try{
+						message.delete(10000);
+					}
+					catch(err){
+						console.log(`An error has occured `+err);
+					}
 					clearMe();
 					isChan[i]=true;
 					moveMe();
 				}
 		}
-		if (command=== "join"){
-			message.delete();
+		if (command=== "viewall"){
+			try{
+				message.delete(10000);
+			}
+			catch(err){
+				console.log(`An error has occured `+err);
+			}
 			for (i = 0; i < n; ++i) {
 				if(client.channels.has(channelIDs[i])){
 					if (!channelIDs[i]) return
@@ -78,7 +88,12 @@ client.on("message", async message => {
 	}
 	
 	if(command === "leave") {
-		message.delete();
+		try{
+			message.delete(10000);
+		}
+		catch(err){
+			console.log(`An error has occured `+err);
+		}
 		clearMe();
 		moveMe();
 	}
