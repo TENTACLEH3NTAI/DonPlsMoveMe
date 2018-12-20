@@ -1,8 +1,13 @@
 { 
-    "token"  : "",
     "prefix" : "m",
     "channelID" : [""],
     "cmd" : [""],
     "permitted"  : [""],
-    "missingChannelWarning"  : "false"
+    "warningMessages"  : "true",
+    "roles1" : [""],
+    "roles2" : [""],
+    "roles3" : [""],
+    "adminID" : [""],
+    "botActivity" : "the Kazoo!",
+    "deleteMessages" : ["true"]
 }
