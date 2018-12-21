@@ -1,1 +1,1 @@
-mover: node index.js
+mover: nodemon index.js
